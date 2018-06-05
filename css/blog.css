@@ -15,7 +15,27 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
- /* background-color:yellow;*/
+  background: #fcecfc; /* Old browsers */
+  background: radial-gradient(ellipse at center, #fcecfc 0%,#0034c4 27%,#fd89d7 59%,#8af1fc 81%,#ff7cd8 100%);
+  animation: animationbody ease 2s alternate infinite;
+}
+
+@keyframes animationbody{
+  0%{
+    background-size: 300px 100px;
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
+  50% {
+    background-position: 0;}
+  100%{ background-position: 0;
+    background-size: 400px 250px;}
+
+  }
+.blog-masthead .container{
+  background-color: transparent;
+ }
+.container{
+  background-color: #ffffff;
+
 }
 
 h1, .h1,
