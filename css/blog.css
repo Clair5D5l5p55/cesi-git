@@ -2,9 +2,18 @@
  * Globals
  */
 
+ ::root{
+  --main-color:#333;
+  --title-color:#ECA400;
+  --subtitle-color:#6952F3;
+  --border-reg:1px solid #333;
+  --debug: outline 1px dashed red;
+ }
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
+ /* background-color:yellow;*/
 }
 
 h1, .h1,
@@ -169,8 +178,24 @@ h6, .h6 {
     display: inline-block;
     padding: 10px;
     font-weight: 500;
-	
+
 }
 .blog-nav li a {
     color: #fff;
 }
+
+ /*Benjamin's Styles*/
+ h2.blog-post-title a {
+  font-size:2rem;
+  color:var(--title-color);
+  text-transform: uppercase;
+ }
+ .blog-post-meta{
+   display:inline-block;
+   padding-bottom:5px;
+   border-bottom:3px solid transparent;
+   border-image: linear-gradient(to right, var(--subtitle-color) 0%, var(--title-color) 50%, var(--main-color)  100%) 1;
+ }
+ .blog-post-meta > a {
+   font-weight:bold;
+ }
