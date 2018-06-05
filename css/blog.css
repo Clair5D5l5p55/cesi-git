@@ -243,7 +243,6 @@ nav li:hover a ~ ul.children {
    width:0;
    height:3px;
    background:linear-gradient(to right, var(--subtitle-color) 0%, var(--title-color) 50%, var(--main-color)  100%) no-repeat center;
-
    transition:width 0.25s ease-in;
  }
  .blog-post-meta:hover::after{
@@ -254,4 +253,16 @@ nav li:hover a ~ ul.children {
    color:var(--subtitle-color);
    text-decoration:none;
  }
+ ul.pager > li > a {
 
+width:200px;
+background-color:transparent;
+outline:1px solid var(--main-color);
+transition:all 0.15s ease-in-out;
+border-radius:0;
+ }
+  ul.pager > li > a:hover{
+    outline-width:3px;
+    background-color:var(--subtitle-color);
+    color:#fff;
+  }
