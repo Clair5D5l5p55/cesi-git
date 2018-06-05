@@ -39,8 +39,13 @@ h6, .h6 {
   background-color: #428bca;
   -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
           box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
-
+nav.blog-nav{
+  display: flex;
+}
 /* Nav links */
 .blog-nav-item {
   position: relative;
@@ -54,7 +59,13 @@ h6, .h6 {
   color: #fff;
   text-decoration: none;
 }
+ul.children{
+ visibility: hidden;
+}
 
+nav li:hover a ~ ul.children {
+  visibility: visible;
+}
 /* Active state gets a caret at the bottom */
 .blog-nav .active {
   color: #fff;
@@ -164,12 +175,28 @@ h6, .h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
 .blog-nav li {
 		position: relative;
     display: inline-block;
     padding: 10px;
     font-weight: 500;
-	
+}
+.blog-nav ul.children {
+  position: absolute;
+  left: 0;
+  width: 125px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 1px #70707066;
+  padding: 0;
+  background-color: lightgray;
+}
+.blog-nav ul.children ul.children{
+  box-shadow: none;
+}
+
+.blog-nav ul.children li{
+  display: flex;
 }
 .blog-nav li a {
     color: #fff;

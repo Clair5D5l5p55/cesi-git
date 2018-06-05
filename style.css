@@ -5,3 +5,7 @@ Description: Bootstrap Blog template converted to Wordpress
 Version: 0.0.2
 Tags: bootstrap
 */
+
+nav.blog-nav{
+    display: flex;
+}
