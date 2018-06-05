@@ -1,6 +1,7 @@
 /*
  * Globals
  */
+@import url('https://fonts.googleapis.com/css?family=Jua');
 
  :root{
   --main-color:#333;
@@ -10,10 +11,11 @@
   --debug:  1px dashed red;
   --outline-reg: 2px solid #ECA400;
   --background-post:#EAF8BF;
+  --font-base : 'Jua', sans-serif;
  }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: var(--font-base), Georgia, "Times New Roman", Times, serif;
   color: #555;
   background: #fcecfc; /* Old browsers */
   background: radial-gradient(ellipse at center, #fcecfc 0%,#0034c4 27%,#fd89d7 59%,#8af1fc 81%,#ff7cd8 100%);
