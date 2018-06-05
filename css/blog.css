@@ -2,9 +2,20 @@
  * Globals
  */
 
+ :root{
+  --main-color:#333;
+  --title-color:#ECA400;
+  --subtitle-color:#6952F3;
+  --border-reg:1px solid #333;
+  --debug:  1px dashed red;
+  --outline-reg: 2px solid #ECA400;
+  --background-post:#EAF8BF;
+ }
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
+ /* background-color:yellow;*/
 }
 
 h1, .h1,
@@ -181,6 +192,7 @@ nav li:hover a ~ ul.children {
     display: inline-block;
     padding: 10px;
     font-weight: 500;
+
 }
 .blog-nav ul.children {
   position: absolute;
@@ -197,7 +209,49 @@ nav li:hover a ~ ul.children {
 
 .blog-nav ul.children li{
   display: flex;
+
 }
 .blog-nav li a {
     color: #fff;
 }
+
+
+ /*Benjamin's Styles*/
+ .blog-post{
+   padding:1rem;
+ }
+ .blog-post:hover,.blog-post:focus{
+   outline:var(--outline-reg);
+   background-color:var(--background-post);
+ }
+ h2.blog-post-title a {
+  font-size:2rem;
+  color:var(--title-color);
+  text-transform: uppercase;
+  text-decoration: none;
+ }
+ .blog-post-meta{
+   position: relative;
+   display:inline-block;
+   /*border-bottom:3px solid transparent;
+   border-image: linear-gradient(to right, var(--subtitle-color) 0%, var(--title-color) 50%, var(--main-color)  100%) 1;*/
+ }
+ .blog-post-meta::after{
+   content: ' ';
+   position: absolute;
+   bottom:-2px;
+   width:0;
+   height:3px;
+   background:linear-gradient(to right, var(--subtitle-color) 0%, var(--title-color) 50%, var(--main-color)  100%) no-repeat center;
+
+   transition:width 0.25s ease-in;
+ }
+ .blog-post-meta:hover::after{
+   width:100%;
+ }
+ .blog-post-meta > a, .blog-post-meta >a:hover {
+   font-weight:bold;
+   color:var(--subtitle-color);
+   text-decoration:none;
+ }
+
